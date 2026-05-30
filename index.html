@@ -113,6 +113,45 @@
   }
   .back-to-top.visible { opacity: 1; visibility: visible; }
   .back-to-top:hover { background: var(--jade-light); transform: translateY(-3px); }
+  
+  /* 左侧浮动导航键 */
+  .floating-nav {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 998;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+  .floating-nav.visible { opacity: 1; visibility: visible; }
+  .floating-nav-item {
+    width: 44px;
+    height: 44px;
+    background: rgba(253,248,240,0.95);
+    border: 2px solid var(--jade);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(45,106,79,0.2);
+    text-decoration: none;
+    color: var(--jade);
+  }
+  .floating-nav-item:hover { background: var(--jade); color: #fff; transform: scale(1.1); }
+  .floating-nav-item.active { background: var(--jade); color: #fff; }
+  
+  @media (max-width: 768px) {
+    .floating-nav { left: 10px; }
+    .floating-nav-item { width: 38px; height: 38px; font-size: 0.95rem; }
+  }
 
   /* === HERO === */
   .hero {
@@ -805,6 +844,16 @@
   </div>
 </nav>
 
+
+<!-- Floating Navigation -->
+<nav class="floating-nav" id="floatingNav">
+  <a href="#about" class="floating-nav-item" data-section="about" title="村情简介">🏡</a>
+  <a href="#news" class="floating-nav-item" data-section="news" title="新闻动态">📰</a>
+  <a href="#village-history" class="floating-nav-item" data-section="village-history" title="村史渊源">📜</a>
+  <a href="#committee" class="floating-nav-item" data-section="committee" title="村支两委">👥</a>
+  <a href="#contact" class="floating-nav-item" data-section="contact" title="联系我们">📞</a>
+</nav>
+
 <!-- Hero -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -1264,6 +1313,57 @@ document.querySelectorAll('.feature-card, .contact-card, .notice-board, .about-g
       });
     });
   }
+  
+  
+  // Floating Navigation
+  const floatingNav = document.getElementById('floatingNav');
+  const floatingNavItems = document.querySelectorAll('.floating-nav-item');
+  const sections = ['about', 'news', 'village-history', 'committee', 'contact'];
+  
+  if (floatingNav) {
+    // Show/hide floating nav based on scroll position
+    window.addEventListener('scroll', () => {
+      // Show after hero section (300px)
+      if (window.scrollY > 300) {
+        floatingNav.classList.add('visible');
+      } else {
+        floatingNav.classList.remove('visible');
+      }
+      
+      // Highlight active section
+      let currentSection = '';
+      sections.forEach(id => {
+        const section = document.getElementById(id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom > 150) {
+            currentSection = id;
+          }
+        }
+      });
+      
+      floatingNavItems.forEach(item => {
+        if (item.dataset.section === currentSection) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    });
+    
+    // Smooth scroll on click
+    floatingNavItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = item.dataset.section;
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  }
+
 
   </script>
 
