@@ -65,6 +65,54 @@
   }
   .nav-links a:hover { color: var(--jade); }
   .nav-links a:hover::after { width: 100%; }
+  
+  /* 汉堡菜单按钮 */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--ink);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .nav-hamburger.active span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+  
+  /* 回到顶部按钮 */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--jade);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 4px 16px rgba(45,106,79,0.3);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .back-to-top.visible { opacity: 1; visibility: visible; }
+  .back-to-top:hover { background: var(--jade-light); transform: translateY(-3px); }
 
   /* === HERO === */
   .hero {
@@ -700,7 +748,23 @@
     .news-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 768px) {
-    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-links { 
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(253,248,240,0.98);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      z-index: 999;
+    }
+    .nav-links.active { display: flex; }
+    .nav-links a { font-size: 1.2rem; }
     .about-grid { grid-template-columns: 1fr; }
     .features-grid { grid-template-columns: 1fr; }
     .notice-board-grid { grid-template-columns: 1fr; }
@@ -722,17 +786,22 @@
 <!-- Nav -->
 <nav id="nav">
   <div class="nav-inner">
-    <div class="nav-brand">
+    <a href="#" class="nav-brand">
       <img src="images/ren-character-transparent.png" alt="仁家坪新村">
       仁家坪新村
-    </div>
-    <ul class="nav-links">
+    </a>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#about">村情简介</a></li>
       <li><a href="#news">新闻动态</a></li>
       <li><a href="#village-history">村史渊源</a></li>
       <li><a href="#committee">村支两委</a></li>
       <li><a href="#contact">联系我们</a></li>
     </ul>
+    <button class="nav-hamburger" id="navHamburger" aria-label="菜单">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </nav>
 
@@ -1153,6 +1222,52 @@ document.querySelectorAll('.feature-card, .contact-card, .notice-board, .about-g
 
   startAutoplay();
 })();
-</script>
+
+  
+  // Mobile Navigation Toggle
+  const navHamburger = document.getElementById('navHamburger');
+  const navLinks = document.getElementById('navLinks');
+  
+  if (navHamburger && navLinks) {
+    navHamburger.addEventListener('click', () => {
+      navHamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+    
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navHamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  }
+  
+  // Back to Top Button
+  const backToTop = document.getElementById('backToTop');
+  
+  if (backToTop) {
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    
+    // Scroll to top when clicked
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  </script>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
 </body>
 </html>
