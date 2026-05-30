@@ -114,10 +114,11 @@
   .back-to-top.visible { opacity: 1; visibility: visible; }
   .back-to-top:hover { background: var(--jade-light); transform: translateY(-3px); }
   
-  /* 左侧浮动导航键 */
+  /* 右侧浮动导航键 */
   .floating-nav {
     position: fixed;
-    left: 16px;
+    right: 16px;
+    left: auto;
     top: 50%;
     transform: translateY(-50%);
     z-index: 998;
@@ -156,13 +157,14 @@
   
   @media (max-width: 768px) {
     .floating-nav { 
-      left: 6px; 
-      gap: 4px;
+      right: 8px; 
+      left: auto;
+      gap: 3px;
     }
     .floating-nav-item { 
-      width: 32px; 
-      height: 32px; 
-      font-size: 0.9rem; 
+      width: 28px; 
+      height: 28px; 
+      font-size: 0.8rem; 
     }
   }
 
