@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>仁家坪新村十五五规划方案（2026-2030年）</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --jade: #2D6A4F;
+    --jade-light: #40916C;
+    --jade-dark: #1B4332;
+    --cream: #FDF8F0;
+    --parchment: #F5EDE3;
+    --gold: #B8860B;
+    --ink: #1A1A1A;
+    --ink-light: #4A4A4A;
+  }
+  body { font-family: 'Noto Sans SC', sans-serif; color: var(--ink); background: var(--cream); line-height: 1.9; padding-bottom: 60px; }
+  .article-header { background: linear-gradient(135deg, var(--jade-dark) 0%, var(--jade) 100%); color: #fff; padding: 60px 20px 50px; text-align: center; }
+  .article-header .breadcrumb { font-size: 0.85rem; opacity: 0.8; margin-bottom: 20px; }
+  .article-header .breadcrumb a { color: #fff; text-decoration: none; }
+  .article-header h1 { font-family: 'Noto Serif SC', serif; font-size: clamp(1.2rem, 3vw, 1.8rem); max-width: 800px; margin: 0 auto 15px; line-height: 1.5; }
+  .article-meta { display: flex; justify-content: center; gap: 24px; font-size: 0.9rem; opacity: 0.85; flex-wrap: wrap; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  .article-body { background: #fff; border-radius: 12px; padding: 40px 35px; margin-top: -30px; box-shadow: 0 4px 30px rgba(0,0,0,0.08); position: relative; z-index: 1; }
+
+  /* 目录 */
+  .toc { background: var(--parchment); border-radius: 10px; padding: 20px 24px; margin-bottom: 32px; border-left: 4px solid var(--gold); }
+  .toc h3 { font-family: 'Noto Serif SC', serif; color: var(--jade-dark); font-size: 1rem; margin-bottom: 12px; }
+  .toc ol { margin-left: 1.2em; line-height: 2; }
+  .toc a { color: var(--jade); text-decoration: none; font-size: 0.92rem; }
+  .toc a:hover { color: var(--gold); text-decoration: underline; }
+
+  /* 章节 */
+  .chapter { margin-top: 40px; page-break-before: always; }
+  .chapter-title { font-family: 'Noto Serif SC', serif; font-size: 1.25rem; color: var(--jade-dark); font-weight: 700; border-left: 5px solid var(--jade); padding-left: 14px; margin-bottom: 18px; }
+  .section-title { font-family: 'Noto Serif SC', serif; font-size: 1.05rem; color: var(--jade); font-weight: 700; margin: 22px 0 10px; padding-bottom: 6px; border-bottom: 1px solid rgba(45,106,79,0.12); }
+  .subsection { font-size: 0.95rem; color: var(--ink-light); margin: 12px 0 6px; font-weight: 600; }
+  p { font-size: 0.93rem; color: var(--ink-light); line-height: 2; margin-bottom: 10px; text-indent: 2em; }
+  p.no-indent { text-indent: 0; }
+
+  /* 指标表格 */
+  .indicator-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.88rem; }
+  .indicator-table th { background: var(--jade); color: #fff; padding: 9px 12px; text-align: center; font-weight: 600; }
+  .indicator-table td { padding: 8px 12px; border-bottom: 1px solid rgba(45,106,79,0.08); text-align: center; }
+  .indicator-table tr:hover td { background: rgba(45,106,79,0.03); }
+  .indicator-table tr:nth-child(even) td { background: rgba(45,106,79,0.015); }
+
+  /* 项目卡片 */
+  .project-card { background: var(--parchment); border-radius: 8px; padding: 16px 20px; margin: 14px 0; border-left: 3px solid var(--jade); }
+  .project-card h4 { font-family: 'Noto Serif SC', serif; color: var(--jade-dark); font-size: 0.98rem; margin-bottom: 8px; }
+  .project-card p { text-indent: 0; font-size: 0.9rem; }
+
+  /* 高亮框 */
+  .highlight { background: linear-gradient(135deg, rgba(45,106,79,0.06), rgba(184,134,11,0.06)); border-radius: 8px; padding: 14px 18px; margin: 16px 0; border-left: 3px solid var(--gold); }
+  .highlight p { text-indent: 0; font-size: 0.9rem; margin-bottom: 6px; }
+
+  /* 三大工程 */
+  .project-list { margin: 12px 0; }
+  .project-list li { margin-bottom: 6px; line-height: 1.9; }
+
+  .back-link { display: inline-block; margin-top: 32px; color: var(--jade); text-decoration: none; font-weight: 500; }
+  .back-link:hover { color: var(--gold); }
+
+  @media (max-width: 768px) {
+    .article-body { padding: 28px 20px; }
+    .article-header { padding: 40px 16px 35px; }
+    .indicator-table { font-size: 0.8rem; }
+    .indicator-table th, .indicator-table td { padding: 7px 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="article-header">
+  <div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../index.html#news">规划与政策</a></div>
+  <h1>「十五五」时期仁家坪新村村级规划方案<br>（2026—2030年）</h1>
+  <div class="article-meta">
+    <span>📅 发布：2026年3月</span>
+    <span>📝 仁家坪新村村民委员会</span>
+    <span>🏷️ 十五五规划</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="article-body">
+
+    <!-- 目录 -->
+    <div class="toc">
+      <h3>📑 目 录</h3>
+      <ol>
+        <li><a href="#preface">前言</a></li>
+        <li><a href="#ch1">第一章 规划总则</a></li>
+        <li><a href="#ch2">第二章 现状分析与核心问题</a></li>
+        <li><a href="#ch3">第三章 总体布局与空间管控</a></li>
+        <li><a href="#ch4">第四章 核心任务与实施路径</a></li>
+        <li><a href="#ch5">第五章 实施计划与项目库</a></li>
+        <li><a href="#ch6">第六章 资金保障与政策衔接</a></li>
+        <li><a href="#ch7">第七章 规划实施与监督评估</a></li>
+        <li><a href="#appendix">附则</a></li>
+      </ol>
+    </div>
+
+    <!-- 前言 -->
+    <div id="preface">
+      <h2 class="chapter-title">前 言</h2>
+      <p class="no-indent">"十五五"时期（2026—2030年）是我国全面建设社会主义现代化国家的关键阶段，也是推动乡村振兴战略向纵深发展的关键五年。</p>
+      <p>本规划紧扣国家"十五五"乡村振兴战略、《乡村全面振兴规划（2024—2027年）》片区化推进要求，对标邵东市"十五五""拼在产业、赢在环境、城乡融合"主线与流泽镇国土空间规划（2021—2035年），立足仁家坪新村区位、资源与治理基础，以<strong>"集聚提升类"村庄</strong>为定位，突出合规用地、产业提质、设施完善、数字治理，打造<strong>"流泽镇中部农工贸融合节点村、和美乡村示范村"</strong>，为2035年农村基本具备现代生活条件筑牢基础。</p>
+      <p>仁家坪新村在过去的发展中取得了一定成绩，但在产业升级、基础设施完善、生态环境保护等方面仍面临挑战。为抓住发展机遇，实现村庄可持续发展，特制定本规划方案。</p>
+      <p>本规划为法定规划衔接与实施性方案，需与流泽镇国土空间详细规划、村庄规划编制单元深度衔接，作为项目申报、资金落地、建设管理的核心依据。</p>
+    </div>
+
+    <!-- 第一章 -->
+    <div id="ch1" class="chapter">
+      <h2 class="chapter-title">第一章 规划总则</h2>
+
+      <h3 class="section-title">1.1 规划范围与期限</h3>
+      <p><strong>规划范围：</strong>邵东市流泽镇仁家坪新村行政村全域，含现有村民小组，以村集体土地确权边界、流泽镇国土空间规划"仁家坪新村编制单元"为法定边界。</p>
+      <p><strong>规划期限：</strong>2026—2030年（"十五五"），分三个阶段：</p>
+      <ul class="project-list">
+        <li><strong>启动期</strong>（2026年）：打基础、立规矩</li>
+        <li><strong>攻坚期</strong>（2027—2028年）：补短板、育产业</li>
+        <li><strong>提升期</strong>（2029—2030年）：提品质、树品牌</li>
+      </ul>
+
+      <h3 class="section-title">1.2 规划定位与村庄类型</h3>
+      <p><strong>村庄类型：</strong>集聚提升类（核心），兼顾农工贸配套与生态宜居。</p>
+      <p><strong>总体定位：</strong>流泽镇中部"<strong>产业集聚小节点、设施完善样板村、数字治理示范村</strong>"，承接镇域产业外溢，联动周边村形成片区发展格局。</p>
+      <p><strong>发展口号：</strong>合规兴村、产业强村、数字活村、和美安村。</p>
+
+      <h3 class="section-title">1.3 规划依据</h3>
+      <div class="highlight">
+        <p>📜 <strong>国家级：</strong>《乡村全面振兴规划（2024—2027年）》《县域农村基本具备现代生活条件建设总体规划（2026—2030年）》</p>
+        <p>📜 <strong>省级：</strong>湖南省"三高四新"、乡村振兴片区化推进政策</p>
+        <p>📜 <strong>市级：</strong>邵东市"十五五"规划建议、2026年政府工作报告、流泽镇国土空间规划（2021—2035年）</p>
+        <p>📜 <strong>村级：</strong>村集体资产台账、土地确权成果、村民议事决议</p>
+      </div>
+
+      <h3 class="section-title">1.4 核心目标</h3>
+      <p>到2030年，将仁家坪新村建设成为<strong>产业兴旺、生态宜居、乡风文明、治理有效、生活富裕</strong>的现代化乡村，实现农业强、农村美、农民富的美好愿景。</p>
+
+      <table class="indicator-table">
+        <tr>
+          <th>类别</th><th>指标（2030年）</th><th>2026年</th><th>2028年</th>
+        </tr>
+        <tr>
+          <td rowspan="2" style="font-weight:600;color:var(--jade-dark)">产业经济</td>
+          <td>村集体经营性收入</td><td>≥15万元/年</td><td>≥30万元/年</td>
+        </tr>
+        <tr>
+          <td>农民人均可支配收入</td><td>≥市均值105%</td><td>≥市均值112%</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--jade-dark)">用地合规</td>
+          <td>违法用地"零新增"</td><td>新增为零</td><td>处置率≥70%</td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="font-weight:600;color:var(--jade-dark)">基础设施</td>
+          <td>自来水普及率</td><td>普及率95%</td><td>普及率98%</td>
+        </tr>
+        <tr>
+          <td>生活污水治理率</td><td>治理率≥40%</td><td>治理率≥65%</td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="font-weight:600;color:var(--jade-dark)">人居环境</td>
+          <td>垃圾分类收运率</td><td>收运率100%</td><td>处理率100%</td>
+        </tr>
+        <tr>
+          <td>美丽庭院</td><td>≥20%庭院</td><td>≥40%庭院</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--jade-dark)">数字治理</td>
+          <td>政务服务线上可办率</td><td>≥60%</td><td>≥80%</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--jade-dark)">民生治理</td>
+          <td>养老保险参保率</td><td>≥95%</td><td>≥97%</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 第二章 -->
+    <div id="ch2" class="chapter">
+      <h2 class="chapter-title">第二章 现状分析与核心问题</h2>
+
+      <h3 class="section-title">2.1 基础概况</h3>
+      <div class="highlight">
+        <p><strong>📍 区位条件：</strong>位于流泽镇中西部，属镇域"一核两轴两区"风貌格局覆盖范围，紧邻S226/S333风貌轴，为镇域燃气管道已覆盖村，5G全域覆盖。</p>
+        <p><strong>🌾 产业基础：</strong>以传统农业为主，种植水稻、油菜，部分村民发展玉竹、金银花、油茶，存在小型加工与养殖业态，<strong>邵东市章斌生物科技有限公司（槟榔加工）</strong>落户本村。</p>
+        <p><strong>🚜 基础设施：</strong>道路基本硬化，但部分路段宽度不足、质量较差；水利设施老化失修，水塘蓄水能力差；竹泉片区变压器问题尚未解决。</p>
+        <p><strong>🏥 公共服务：</strong>有村小学一所（面临无生源倒闭问题）；村卫生室条件有限；文化活动场所较少。</p>
+        <p><strong>🌳 生态环境：</strong>自然环境优美，但存在生活垃圾随意丢弃、农业面源污染等问题。</p>
+      </div>
+
+      <h3 class="section-title">2.2 核心短板</h3>
+      <ul class="project-list">
+        <li><strong>用地合规：</strong>产业项目落地与镇国土空间规划衔接不紧密，存在"先建后批"风险</li>
+        <li><strong>产业能级：</strong>种养业规模化不足，村集体收入渠道单一</li>
+        <li><strong>设施短板：</strong>生活污水治理、雨污分流滞后；部分老旧房屋风貌不统一</li>
+        <li><strong>数字赋能：</strong>政务服务线上化程度低，产业数字化起步晚</li>
+      </ul>
+
+      <h3 class="section-title">2.3 面临形势</h3>
+      <p><strong>发展机遇：</strong>国家对乡村振兴支持力度加大；城乡融合发展推进，农村市场潜力巨大；科技进步为农业现代化提供技术支撑。</p>
+      <p><strong>面临挑战：</strong>周边村庄竞争激烈；生态环境保护要求越来越高；村民对公共服务的质量和水平提出更高要求。</p>
+    </div>
+
+    <!-- 第三章 -->
+    <div id="ch3" class="chapter">
+      <h2 class="chapter-title">第三章 总体布局与空间管控</h2>
+
+      <h3 class="section-title">3.1 空间结构</h3>
+      <p>规划形成"<strong>一心、两带、三区</strong>"的空间结构：</p>
+      <div class="project-card">
+        <h4>🏛️ 一心：村级综合服务中心（村委驻地）</h4>
+        <p>整合政务、医疗、文化、电商、综治功能，打造村域治理与服务核心。</p>
+      </div>
+      <div class="project-card">
+        <h4>📌 两带</h4>
+        <p>① <strong>产业联动带</strong>（对接S226）：布局合规产业配套、仓储物流、农资服务</p>
+        <p>② <strong>生态田园带</strong>（村域南部）：发展智慧种养、农旅观光</p>
+      </div>
+      <div class="project-card">
+        <h4>🗺️ 三区</h4>
+        <p>① <strong>生活居住区</strong>（集聚提升）：优化宅基地布局，推进风貌整治</p>
+        <p>② <strong>合规产业区</strong>（严格对接镇国土空间规划）：实行"项目准入+用地审批"双控</p>
+        <p>③ <strong>生态保育区</strong>（耕地、林地、坑塘）：严守"三区三线"，落实耕地保护责任制</p>
+      </div>
+
+      <h3 class="section-title">3.2 刚性管控规则</h3>
+      <ul class="project-list">
+        <li><strong>用地合规：</strong>所有建设项目必须符合流泽镇国土空间规划，实行"先规划、后审批、再建设"</li>
+        <li><strong>风貌管控：</strong>民居采用"邵东乡村简约风格"，白墙黛瓦、坡屋顶，建筑高度≤3层</li>
+        <li><strong>生态红线：</strong>耕地保有量、永久基本农田面积不减少，坑塘水面、林地严格保护</li>
+      </ul>
+    </div>
+
+    <!-- 第四章 -->
+    <div id="ch4" class="chapter">
+      <h2 class="chapter-title">第四章 核心任务与实施路径</h2>
+      <p class="no-indent">围绕"十五五"发展目标，实施<strong>五大工程</strong>，系统推进村庄全面振兴。</p>
+
+      <h3 class="section-title">工程一：用地合规与产业提质工程</h3>
+      <div class="project-card">
+        <h4>（一）存量违建清零与用地规范（2026—2027年）</h4>
+        <p>村部用地处理、老竹泉片区村部处理，<strong>2027年底前处置率100%</strong>；设立村级用地协管员，实行"审批前公示、建设中巡查、竣工后核验"全流程管控。</p>
+      </div>
+      <div class="project-card">
+        <h4>（二）产业体系构建（对接邵东"新质生产力"）</h4>
+        <p>① <strong>基础农业升级：</strong>2028年建成<strong>300亩标准化基地</strong>（水稻、油茶、玉竹），打造"订单农业"示范点</p>
+        <p>② <strong>工贸配套联动：</strong>布局五金、轻工产品仓储、分拣、包装配套服务，2030年培育<strong>1家以上规上/限上配套企业</strong></p>
+        <p>③ <strong>农旅融合补充：</strong>打造"油茶花海+中药材观光"田园景观，建设<strong>黄漫岭山山顶观光平台</strong>，2030年建成1个农旅打卡点</p>
+        <p>④ <strong>村集体增收：</strong>2030年实现经营性收入<strong>≥50万元/年</strong></p>
+      </div>
+
+      <h3 class="section-title">工程二：基础设施现代化工程</h3>
+      <div class="project-card">
+        <h4>（一）市政管线升级（2026—2028年）</h4>
+        <p>供水：改造村属自来水厂老旧供水管网，<strong>2030年自来水普及率100%</strong></p>
+        <p>污水：铺设污水支管网，对接流泽镇污水处理厂，<strong>2028年生活污水治理率≥85%</strong></p>
+        <p>能源：推进管道燃气全覆盖，<strong>2030年覆盖率≥90%</strong></p>
+        <p>电力：升级村内变压器与配电线路，解决竹泉片区变压器问题</p>
+      </div>
+
+      <h3 class="section-title">工程三：人居环境和美工程</h3>
+      <p><strong>垃圾治理：</strong>2026年实现垃圾分类收运率100%，2028年实现无害化处理率100%</p>
+      <p><strong>厕所革命：</strong>2030年前完成剩余卫生厕所改造，普及率100%</p>
+      <p><strong>风貌整治：</strong>推进老旧房屋立面改造、庭院美化，<strong>2030年美丽庭院≥60%</strong></p>
+
+      <h3 class="section-title">工程四：数字赋能与治理现代化工程</h3>
+      <p><strong>智慧网格：</strong>搭建村级智慧网格管理平台，<strong>2030年政务服务线上可办率≥95%</strong></p>
+      <p><strong>平安建设：</strong>安装高清监控摄像头，覆盖村道、产业区、公共空间，智慧网格事件闭环率≥98%</p>
+
+      <h3 class="section-title">工程五：民生保障与乡风文明工程</h3>
+      <p><strong>农民增收：</strong>2030年农民人均可支配收入≥邵东市农村均值120%</p>
+      <p><strong>社会保障：</strong>2030年养老保险参保率≥98%</p>
+      <p><strong>乡风文明：</strong>评选表彰"文明家庭""好媳妇""好婆婆"等先进典型</p>
+    </div>
+
+    <!-- 第五章 -->
+    <div id="ch5" class="chapter">
+      <h2 class="chapter-title">第五章 实施计划与项目库</h2>
+
+      <h3 class="section-title">5.1 启动期（2026年）：打基础、立规矩</h3>
+      <div class="project-card">
+        <h4>核心任务</h4>
+        <p>存量违建处置（30%）、用地台账建立；合作社成立、综合服务中心前期；管网改造启动、智慧网格平台搭建。</p>
+        <h4>重点项目</h4>
+        <p>违建拆除与土地复耕项目；种养合作社注册；供水管网改造（一期）；智慧网格平台搭建。</p>
+      </div>
+
+      <h3 class="section-title">5.2 攻坚期（2027—2028年）：补短板、育产业</h3>
+      <div class="project-card">
+        <h4>核心任务</h4>
+        <p>存量违建清零、标准化种植基地建成；工贸配套项目落地、污水管网铺设；卫生厕所改造（70%）、电商站运营。</p>
+        <h4>重点项目</h4>
+        <p>标准化种养基地（300亩）；工贸配套仓储项目；污水支管网建设；电商服务站建设；美丽庭院打造（40%）。</p>
+      </div>
+
+      <h3 class="section-title">5.3 提升期（2029—2030年）：提品质、树品牌</h3>
+      <div class="project-card">
+        <h4>核心任务</h4>
+        <p>产业体系完善、设施全覆盖；数字治理成熟、农旅融合见效；乡风文明深化。</p>
+        <h4>重点项目</h4>
+        <p>① 富硒共享农庄项目（黄漫岭山山顶观光平台）</p>
+        <p>② 茶油产业基地</p>
+        <p>③ GAP玉竹基地（仁家坪片区）</p>
+        <p>④ 七井至仁家坪（道路提质改造项目）</p>
+        <p>⑤ 仁家坪至两兴（道路提质改造项目）</p>
+      </div>
+    </div>
+
+    <!-- 第六章 -->
+    <div id="ch6" class="chapter">
+      <h2 class="chapter-title">第六章 资金保障与政策衔接</h2>
+
+      <h3 class="section-title">6.1 资金来源（多元化）</h3>
+      <ul class="project-list">
+        <li><strong>上级资金：</strong>对接国家"两重""两新"、乡村振兴、农田建设等专项资金</li>
+        <li><strong>镇级配套：</strong>对接流泽镇国土空间规划、产业发展专项资金</li>
+        <li><strong>社会资本：</strong>吸引邵商回归、企业投资、乡贤捐赠</li>
+        <li><strong>村集体自筹：</strong>通过产业租赁、服务收费等渠道积累资金</li>
+      </ul>
+
+      <h3 class="section-title">6.2 政策衔接（核心）</h3>
+      <div class="highlight">
+        <p>📌 与邵东市"十五五"规划衔接：紧扣"产业提质、城乡融合"主线</p>
+        <p>📌 与流泽镇国土空间规划衔接：严格遵循空间管控、设施布局要求</p>
+        <p>📌 与国家乡村振兴政策衔接：落实片区化推进、分类施策要求</p>
+      </div>
+    </div>
+
+    <!-- 第七章 -->
+    <div id="ch7" class="chapter">
+      <h2 class="chapter-title">第七章 规划实施与监督评估</h2>
+
+      <h3 class="section-title">7.1 组织保障</h3>
+      <p>成立"<strong>仁家坪新村十五五规划实施工作领导小组</strong>"，由总支部书记任组长，村支两委、乡贤、合作社、组长为成员，对接镇政府、自然资源、农业农村等部门，明确责任分工。</p>
+
+      <h3 class="section-title">7.2 监督机制</h3>
+      <ul class="project-list">
+        <li><strong>村民监督：</strong>通过村民代表大会、村务公开栏，定期公示规划实施进度、资金使用情况</li>
+        <li><strong>专业监督：</strong>村务监督委员会，对项目建设、资金使用进行审计评估</li>
+        <li><strong>上级监督：</strong>主动接受流泽镇政府、邵东市相关部门的监督检查</li>
+      </ul>
+
+      <h3 class="section-title">7.3 评估调整</h3>
+      <p>建立"<strong>年度评估、中期调整、终期考核</strong>"机制，2028年开展中期评估，根据实际情况调整规划内容；2030年开展终期考核，确保核心目标实现。</p>
+
+      <h3 class="section-title">7.4 人才保障</h3>
+      <p>加强农村实用人才队伍建设，培养一批懂技术、会经营、善管理的新型农民；建立人才激励机制，吸引和鼓励各类人才到农村创业发展。</p>
+    </div>
+
+    <!-- 附则 -->
+    <div id="appendix" class="chapter">
+      <h2 class="chapter-title">附 则</h2>
+      <div class="highlight">
+        <p>一、本规划经村民代表大会审议通过，同新村规民约一起报流泽镇政府审核后生效。</p>
+        <p>二、本规划由仁家坪新村村民委员会负责解释，自生效之日起实施。</p>
+        <p>三、本规划实施过程中，如遇国家、省、市重大政策调整，按上级政策执行。</p>
+      </div>
+      <p style="text-align:center;margin-top:24px;font-weight:600;color:var(--jade-dark);">邵东市流泽镇仁家坪新村村民委员会<br>2026年3月</p>
+      <p style="text-align:center;color:var(--ink-light);margin-top:8px;">合规兴村 · 产业强村 · 数字活村 · 和美安村</p>
+    </div>
+
+    <a class="back-link" href="../index.html#news">← 返回规划与政策</a>
+  </div>
+</div>
+
+</body>
+</html>
