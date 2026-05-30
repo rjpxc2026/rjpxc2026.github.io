@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>最低生活保障办理流程 - 仁家坪新村</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --jade: #2D6A4F;
+    --jade-light: #40916C;
+    --jade-dark: #1B4332;
+    --cream: #FDF8F0;
+    --parchment: #F5EDE3;
+    --gold: #B8860B;
+    --ink: #1A1A1A;
+    --ink-light: #4A4A4A;
+  }
+  body {
+    font-family: 'Noto Sans SC', sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.9;
+    padding-bottom: 60px;
+  }
+  .article-header {
+    background: linear-gradient(135deg, var(--jade-dark) 0%, var(--jade) 100%);
+    color: #fff;
+    padding: 60px 20px 50px;
+    text-align: center;
+  }
+  .article-header .breadcrumb {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+  .article-header .breadcrumb a { color: #fff; text-decoration: none; }
+  .article-header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+    max-width: 800px;
+    margin: 0 auto 15px;
+    line-height: 1.4;
+  }
+  .article-meta {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    flex-wrap: wrap;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+  .article-body {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 35px;
+    margin-top: -30px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 1;
+  }
+  .policy-intro {
+    background: linear-gradient(135deg, rgba(45,106,79,0.06), rgba(184,134,11,0.06));
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    border-left: 4px solid var(--gold);
+  }
+  .policy-intro p { margin-bottom: 8px; text-indent: 0; }
+  .policy-intro strong { color: var(--jade); }
+  
+  .process-timeline {
+    position: relative;
+    padding-left: 40px;
+    margin: 32px 0;
+  }
+  .process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--jade), var(--gold));
+  }
+  .process-step {
+    position: relative;
+    margin-bottom: 28px;
+    padding: 20px 24px;
+    background: var(--parchment);
+    border-radius: 10px;
+    border: 1px solid rgba(45,106,79,0.08);
+    transition: all 0.3s;
+  }
+  .process-step:hover {
+    box-shadow: 0 4px 16px rgba(27,67,50,0.1);
+    transform: translateX(4px);
+  }
+  .process-step::before {
+    content: attr(data-step);
+    position: absolute;
+    left: -33px;
+    top: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--jade);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(45,106,79,0.3);
+  }
+  .step-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.1rem;
+    color: var(--jade-dark);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .step-title .step-number {
+    background: var(--jade);
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+  .step-content {
+    font-size: 0.95rem;
+    color: var(--ink-light);
+    line-height: 1.9;
+    margin-bottom: 8px;
+  }
+  .step-detail {
+    background: rgba(255,255,255,0.8);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    line-height: 1.8;
+  }
+  .step-detail strong { color: var(--jade); }
+  
+  .important-note {
+    background: linear-gradient(135deg, rgba(184,134,11,0.08), rgba(184,134,11,0.04));
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 28px 0;
+  }
+  .important-note h4 {
+    font-family: 'Noto Serif SC', serif;
+    color: var(--gold);
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  .important-note ul {
+    margin-left: 20px;
+    line-height: 1.9;
+  }
+  .important-note li { margin-bottom: 6px; }
+  
+  .contact-info {
+    background: var(--parchment);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 32px;
+    border-left: 3px solid var(--jade);
+  }
+  .contact-info p { text-indent: 0; margin-bottom: 6px; }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 24px;
+    color: var(--jade);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  .back-link:hover { color: var(--gold); }
+  
+  @media (max-width: 768px) {
+    .article-body { padding: 28px 20px; }
+    .article-header { padding: 40px 16px 35px; }
+    .process-timeline { padding-left: 32px; }
+    .process-step { padding: 16px; }
+    .process-step::before { width: 28px; height: 28px; left: -29px; font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="article-header">
+  <div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../index.html#news">规划与政策</a></div>
+  <h1>最低生活保障办理流程</h1>
+  <div class="article-meta">
+    <span>📅 发布日期：2026年5月</span>
+    <span>📝 政策指南</span>
+    <span>🏷️ 规划与政策</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="article-body">
+    
+    <div class="policy-intro">
+      <p><strong>最低生活保障（低保）</strong>是国家为保障困难群众基本生活而建立的社会救助制度。凡共同生活的家庭成员人均收入低于当地最低生活保障标准，且符合当地最低生活保障家庭财产状况规定的家庭，可以申请最低生活保障。</p>
+      <p>以下是<strong>邵东市流泽镇仁家坪新村</strong>最低生活保障的完整办理流程，请符合条件的村民参照执行。</p>
+    </div>
+    
+    <div class="process-timeline">
+      
+      <div class="process-step" data-step="1">
+        <div class="step-title">
+          <span class="step-number">一</span>
+          申请
+        </div>
+        <div class="step-content">
+          以<strong>家庭为单位</strong>，由<strong>户主</strong>向所在的<strong>乡镇（办、场）</strong>提出申请。
+        </div>
+        <div class="step-detail">
+          <strong>申请地点：</strong>流泽镇人民政府民政办公室<br>
+          <strong>申请材料：</strong>户主身份证、户口簿、家庭收入证明、财产状况证明等相关材料<br>
+          <strong>咨询电话：</strong>邓斌（村支书）15173960951
+        </div>
+      </div>
+      
+      <div class="process-step" data-step="2">
+        <div class="step-title">
+          <span class="step-number">二</span>
+          入户调查
+        </div>
+        <div class="step-content">
+          由<strong>乡镇（办、场）</strong>组织工作人员到申请对象家庭进行<strong>家庭情况摸底</strong>。
+        </div>
+        <div class="step-detail">
+          <strong>调查内容：</strong>家庭人口、收入来源、财产状况、实际生活水平等<br>
+          <strong>调查方式：</strong>入户查看、邻里访问、信函索证、民主评议等<br>
+          <strong>配合要求：</strong>申请人及家庭成员应如实提供情况，不得隐瞒
+        </div>
+      </div>
+      
+      <div class="process-step" data-step="3">
+        <div class="step-title">
+          <span class="step-number">三</span>
+          村（居、社区）评议
+        </div>
+        <div class="step-content">
+          由<strong>驻村干部</strong>组织村（居、社区）<strong>30人以上</strong>的党员、组长、群众代表召开<strong>民主评议会</strong>，对申报对象入户调查情况进行评议。
+        </div>
+        <div class="step-detail">
+          <strong>评议程序：</strong><br>
+          1. 介绍申请人家庭基本情况<br>
+          2. 介绍入户调查结果<br>
+          3. 参会人员无记名投票评议<br>
+          4. 公布评议结果<br>
+          <strong>记录要求：</strong>做好评议记录，填好民主评议表，上报所在乡镇、街道办事处
+        </div>
+      </div>
+      
+      <div class="process-step" data-step="4">
+        <div class="step-title">
+          <span class="step-number">四</span>
+          乡镇（办、场）评议
+        </div>
+        <div class="step-content">
+          乡镇（办、场）召开<strong>民主评议小组会议</strong>，对拟保障对象进行确定，并将结果<strong>公示</strong>，确认无异议后，填好相关的表格，加盖公章，报<strong>救助局审批</strong>。
+        </div>
+        <div class="step-detail">
+          <strong>评议小组组成：</strong>乡镇干部、村干部、党员代表、群众代表等<br>
+          <strong>公示要求：</strong>公示期不少于7天，接受群众监督<br>
+          <strong>上报材料：</strong>《最低生活保障申请表》、《入户调查表》、《民主评议表》、相关证明材料等
+        </div>
+      </div>
+      
+      <div class="process-step" data-step="5">
+        <div class="step-title">
+          <span class="step-number">五</span>
+          审批
+        </div>
+        <div class="step-content">
+          <strong>救助局</strong>对上报的对象进行<strong>抽查核定</strong>，确定保障标准，委托乡镇、办事处<strong>公示</strong>，无异议后，确定为保障对象。
+        </div>
+        <div class="step-detail">
+          <strong>审批时限：</strong>自受理之日起30日内完成审批<br>
+          <strong>保障标准：</strong>根据家庭人均收入与当地低保标准的差额确定<br>
+          <strong>发放方式：</strong>通过银行按月社会化发放<br>
+          <strong>动态管理：</strong>定期复核，及时调整或退出
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="important-note">
+      <h4>📌 重要提示</h4>
+      <ul>
+        <li><strong>诚信申报：</strong>申请人应当如实申报家庭收入和财产状况，不得隐瞒、虚报、伪造证明材料。</li>
+        <li><strong>监督检查：</strong>低保对象应当定期报告家庭收入、财产变化情况，配合民政部门核查。</li>
+        <li><strong>法律责任：</strong>采取虚报、隐瞒、伪造等手段骗取低保金的，责令退回非法获取的低保金，并依法追究法律责任。</li>
+        <li><strong>咨询渠道：</strong>如有疑问，可前往流泽镇民政办或仁家坪新村村委会咨询。</li>
+      </ul>
+    </div>
+    
+    <div class="contact-info">
+      <p><strong>村委会咨询电话：</strong>邓斌（村支书）15173960951</p>
+      <p><strong>流泽镇民政办：</strong>0739-XXXXXXX（请以实际号码为准）</p>
+      <p><strong>办公地址：</strong>仁家坪新村村委会办公楼 / 流泽镇人民政府</p>
+      <p style="margin-top:12px; font-size:0.9rem; color:var(--ink-light);">符合条件的村民可随时申请，村委会将全程协助办理。</p>
+    </div>
+
+    <a class="back-link" href="../index.html#news">← 返回规划与政策</a>
+  </div>
+</div>
+
+</body>
+</html>
