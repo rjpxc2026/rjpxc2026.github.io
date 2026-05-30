@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公示公告 - 仁家坪新村</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --jade: #2D6A4F; --jade-light: #40916C; --jade-dark: #1B4332;
+    --cream: #FDF8F0; --parchment: #F5EDE3; --gold: #B8860B;
+    --ink: #1A1A1A; --ink-light: #4A4A4A;
+  }
+  body { font-family: 'Noto Sans SC', sans-serif; color:var(--ink); background:var(--cream); line-height:1.8; }
+  
+  nav {
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    padding:1rem 2rem; background:rgba(253,248,240,0.96);
+    backdrop-filter:blur(12px); border-bottom:1px solid rgba(45,106,79,0.15);
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .nav-brand { font-family:'Noto Serif SC',serif; font-size:1.3rem; font-weight:700; color:var(--jade-dark); display:flex; align-items:center; gap:0.5rem; text-decoration:none; }
+  .nav-brand img { width:32px; height:32px; border-radius:50%; object-fit:cover; }
+  .back-link { color:var(--jade); text-decoration:none; font-size:0.9rem; padding:0.4rem 1rem; border:1px solid var(--jade); border-radius:6px; transition:all 0.3s; }
+  .back-link:hover { background:var(--jade); color:#fff; }
+  
+  .page-header {
+    max-width:1000px; margin:120px auto 0; padding:2rem 2rem 0;
+  }
+  .page-title {
+    font-family:'Noto Serif SC',serif; font-size:2rem; color:var(--jade-dark);
+    margin-bottom:0.5rem;
+  }
+  .page-subtitle { font-size:0.95rem; color:var(--ink-light); margin-bottom:2rem; }
+  
+  .notice-list { max-width:1000px; margin:0 auto; padding:2rem; }
+  .notice-item {
+    background:var(--cream); border-radius:12px; padding:1.5rem 2rem;
+    margin-bottom:1.2rem; border:1px solid rgba(45,106,79,0.08);
+    transition:all 0.3s; cursor:pointer;
+    text-decoration:none; color:inherit; display:block;
+  }
+  .notice-item:hover {
+    transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(27,67,50,0.08);
+    border-color:rgba(45,106,79,0.2);
+  }
+  .notice-date {
+    font-size:0.8rem; color:var(--ink-light); margin-bottom:0.5rem;
+    display:flex; align-items:center; gap:0.5rem;
+  }
+  .notice-date::before {
+    content:''; display:inline-block; width:8px; height:8px;
+    background:var(--gold); border-radius:50%;
+  }
+  .notice-title {
+    font-family:'Noto Serif SC',serif; font-size:1.1rem; color:var(--jade-dark);
+    margin-bottom:0.6rem; line-height:1.5;
+  }
+  .notice-excerpt {
+    font-size:0.85rem; color:var(--ink-light); line-height:1.8;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  .notice-tag {
+    display:inline-block; padding:0.2rem 0.6rem; border-radius:4px;
+    background:rgba(184,134,11,0.08); color:var(--gold); font-size:0.75rem;
+    margin-top:0.8rem;
+  }
+  
+  .empty-state {
+    text-align:center; padding:4rem 2rem; color:var(--ink-light);
+  }
+  
+  @media(max-width:768px) {
+    .page-title { font-size:1.5rem; }
+    .notice-item { padding:1.2rem 1.5rem; }
+    .notice-title { font-size:1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-brand">
+    <img src="../images/ren-character-transparent.png" alt="仁">
+    仁家坪新村
+  </a>
+  <a href="../index.html" class="back-link">← 返回首页</a>
+</nav>
+
+<div class="page-header">
+  <h1 class="page-title">📋 公示公告</h1>
+  <p class="page-subtitle">村级事务公示与重要通知公告</p>
+</div>
+
+<div class="notice-list">
+  
+  <!-- 公告条目1 -->
+  <a href="notice-shiwu-plan-2026.html" class="notice-item">
+    <div class="notice-date">2026年3月</div>
+    <h3 class="notice-title">🔸 仁家坪新村十五五规划方案（2026-2030年）</h3>
+    <p class="notice-excerpt">为深入贯彻落实党的二十大精神，扎实推进乡村振兴战略，仁家坪新村结合本村实际，特制定十五五规划方案（2026-2030年），现予以公示，广泛征求村民意见建议...</p>
+    <div class="notice-tag">📅 公示期：2026年3月15日-3月30日</div>
+  </a>
+  
+  <!-- 公告条目2 -->
+  <a href="notice-yibao-2026.html" class="notice-item">
+    <div class="notice-date">2026年2月20日</div>
+    <h3 class="notice-title">🔸 2026年度城乡居民基本医疗保险缴费通知</h3>
+    <p class="notice-excerpt">2026年度城乡居民基本医疗保险缴费工作已经开始，请广大村民在规定时间内完成缴费，以免影响医保待遇享受...</p>
+    <div class="notice-tag">📅 缴费截止：2026年12月31日</div>
+  </a>
+  
+  <!-- 公告条目3 -->
+  <a href="#" class="notice-item" style="opacity:0.6; cursor:default;">
+    <div class="notice-date">2026年1月15日</div>
+    <h3 class="notice-title">🔸 2025年度村集体经济收支情况公示</h3>
+    <p class="notice-excerpt">根据村民委员会组织法和财务公开相关规定，现将仁家坪新村2025年度村集体经济收支情况予以公示，接受全体村民监督...</p>
+    <div class="notice-tag">📅 公示期：2026年1月15日-1月30日</div>
+  </a>
+  
+  <!-- 公告条目4 -->
+  <a href="notice-flood-safety-2026.html" class="notice-item">
+    <div class="notice-date">2025年12月</div>
+    <h3 class="notice-title">🔸 关于开展人居环境整治的通知</h3>
+    <p class="notice-excerpt">为进一步提升村容村貌，改善人居环境，建设美丽宜居乡村，经村"两委"研究决定，在全村范围内开展人居环境整治专项行动...</p>
+    <div class="notice-tag">📅 行动时间：2026年1月-6月</div>
+  </a>
+  
+</div>
+
+</body>
+</html>
