@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>仁家坪新村第十二届村民代表名单公示 - 仁家坪新村</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --jade: #2D6A4F;
+    --jade-light: #40916C;
+    --jade-dark: #1B4332;
+    --cream: #FDF8F0;
+    --parchment: #F5EDE3;
+    --gold: #B8860B;
+    --ink: #1A1A1A;
+    --ink-light: #4A4A4A;
+  }
+  body {
+    font-family: 'Noto Sans SC', sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.9;
+    padding-bottom: 60px;
+  }
+  .article-header {
+    background: linear-gradient(135deg, var(--jade-dark) 0%, var(--jade) 100%);
+    color: #fff;
+    padding: 60px 20px 50px;
+    text-align: center;
+  }
+  .article-header .breadcrumb {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+  .article-header .breadcrumb a { color: #fff; text-decoration: none; }
+  .article-header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+    max-width: 800px;
+    margin: 0 auto 15px;
+    line-height: 1.4;
+  }
+  .article-meta {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    flex-wrap: wrap;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+  .article-body {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 35px;
+    margin-top: -30px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 1;
+  }
+  .notice-info {
+    background: linear-gradient(135deg, rgba(45,106,79,0.06), rgba(184,134,11,0.06));
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+    border-left: 4px solid var(--gold);
+  }
+  .notice-info p { margin-bottom: 8px; text-indent: 0; }
+  .notice-info strong { color: var(--jade); }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .stat-card {
+    background: var(--parchment);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+  .stat-card .number {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--jade);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .stat-card .label {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+  }
+  
+  .representative-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 0.95rem;
+  }
+  .representative-table thead {
+    background: var(--jade);
+    color: #fff;
+  }
+  .representative-table th {
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .representative-table tbody tr {
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    transition: background 0.2s;
+  }
+  .representative-table tbody tr:hover {
+    background: rgba(45,106,79,0.04);
+  }
+  .representative-table td {
+    padding: 10px 8px;
+    text-align: center;
+  }
+  .representative-table .seq {
+    font-weight: 600;
+    color: var(--jade);
+    width: 50px;
+  }
+  .representative-table .name {
+    font-weight: 500;
+    text-align: left;
+    padding-left: 12px;
+  }
+  .representative-table .group {
+    color: var(--jade-light);
+    font-weight: 500;
+  }
+  .representative-table .party {
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .representative-table .mass {
+    color: var(--ink-light);
+  }
+  
+  .table-note {
+    font-size: 0.85rem;
+    color: var(--ink-light);
+    margin: 12px 0 24px;
+    padding: 12px 16px;
+    background: rgba(45,106,79,0.04);
+    border-radius: 6px;
+    line-height: 1.6;
+  }
+  
+  .contact-info {
+    background: var(--parchment);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 32px;
+    border-left: 3px solid var(--jade);
+  }
+  .contact-info p { text-indent: 0; margin-bottom: 6px; }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 24px;
+    color: var(--jade);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  .back-link:hover { color: var(--gold); }
+  
+  @media (max-width: 768px) {
+    .article-body { padding: 28px 20px; }
+    .article-header { padding: 40px 16px 35px; }
+    .representative-table { font-size: 0.85rem; }
+    .representative-table th,
+    .representative-table td { padding: 8px 4px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="article-header">
+  <div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../index.html#news">公示公告</a></div>
+  <h1>仁家坪新村第十二届村民代表名单公示</h1>
+  <div class="article-meta">
+    <span>📅 公示日期：2026年5月30日</span>
+    <span>📝 有效期：7天</span>
+    <span>🏷️ 公示公告</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="article-body">
+    
+    <div class="notice-info">
+      <p><strong>根据《中华人民共和国村民委员会组织法》</strong>和上级有关文件精神，仁家坪新村第十二届村民代表选举工作已完成。现将新一届村民代表名单予以公示。</p>
+      <p>公示期间，如对以下名单有异议，请以书面形式或电话形式向村委会反映。</p>
+    </div>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="number">69</span>
+        <span class="label">村民代表总数</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">44</span>
+        <span class="label">男性代表</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">24</span>
+        <span class="label">女性代表</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">25</span>
+        <span class="label">党员代表</span>
+      </div>
+    </div>
+    
+    <h3 style="color:var(--jade); margin: 28px 0 16px; font-family: 'Noto Serif SC', serif;">第十二届村民代表名单</h3>
+    
+    <div class="table-note">
+      📋 表格说明：共69位村民代表，覆盖全村31个村民小组。其中党员25人，群众44人；连任代表31人，新任代表38人。
+    </div>
+    
+    <div style="overflow-x:auto;">
+    <table class="representative-table">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th style="text-align:left; padding-left:12px;">姓名</th>
+          <th>性别</th>
+          <th>政治面貌</th>
+          <th>所在小组</th>
+          <th>是否连任</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="seq">1</td><td class="name">赵秋阳</td><td>男</td><td class="mass">群众</td><td class="group">第1组</td><td>是</td></tr>
+        <tr><td class="seq">2</td><td class="name">邓明德</td><td>男</td><td class="party">党员</td><td class="group">第1组</td><td>是</td></tr>
+        <tr><td class="seq">3</td><td class="name">李端民</td><td>男</td><td class="mass">群众</td><td class="group">第2组</td><td>是</td></tr>
+        <tr><td class="seq">4</td><td class="name">赵素娥</td><td>女</td><td class="mass">群众</td><td class="group">第2组</td><td>否</td></tr>
+        <tr><td class="seq">5</td><td class="name">曾小才</td><td>男</td><td class="mass">群众</td><td class="group">第3组</td><td>是</td></tr>
+        <tr><td class="seq">6</td><td class="name">蒋文义</td><td>男</td><td class="party">党员</td><td class="group">第3组</td><td>否</td></tr>
+        <tr><td class="seq">7</td><td class="name">赵尚秀</td><td>女</td><td class="mass">群众</td><td class="group">第3组</td><td>是</td></tr>
+        <tr><td class="seq">8</td><td class="name">邓益南</td><td>男</td><td class="mass">群众</td><td class="group">第4组</td><td>是</td></tr>
+        <tr><td class="seq">9</td><td class="name">赵用花</td><td>女</td><td class="party">党员</td><td class="group">第4组</td><td>否</td></tr>
+        <tr><td class="seq">10</td><td class="name">赵银莲</td><td>女</td><td class="mass">群众</td><td class="group">第5组</td><td>是</td></tr>
+        <tr><td class="seq">11</td><td class="name">赵菊春</td><td>女</td><td class="mass">群众</td><td class="group">第5组</td><td>否</td></tr>
+        <tr><td class="seq">12</td><td class="name">凌春西</td><td>男</td><td class="mass">群众</td><td class="group">第6组</td><td>否</td></tr>
+        <tr><td class="seq">13</td><td class="name">邓菊生</td><td>男</td><td class="mass">群众</td><td class="group">第6组</td><td>否</td></tr>
+        <tr><td class="seq">14</td><td class="name">赵安庆</td><td>男</td><td class="party">党员</td><td class="group">第7组</td><td>否</td></tr>
+        <tr><td class="seq">15</td><td class="name">尹建秀</td><td>女</td><td class="party">党员</td><td class="group">第7组</td><td>否</td></tr>
+        <tr><td class="seq">16</td><td class="name">曾分良</td><td>女</td><td class="mass">群众</td><td class="group">第8组</td><td>是</td></tr>
+        <tr><td class="seq">17</td><td class="name">赵明信</td><td>男</td><td class="mass">群众</td><td class="group">第8组</td><td>是</td></tr>
+        <tr><td class="seq">18</td><td class="name">肖国兰</td><td>女</td><td class="mass">群众</td><td class="group">第9组</td><td>否</td></tr>
+        <tr><td class="seq">19</td><td class="name">曾仲华</td><td>男</td><td class="mass">群众</td><td class="group">第9组</td><td>否</td></tr>
+        <tr><td class="seq">20</td><td class="name">曾跃文</td><td>男</td><td class="mass">群众</td><td class="group">第10组</td><td>否</td></tr>
+        <tr><td class="seq">21</td><td class="name">曾桂初</td><td>男</td><td class="mass">群众</td><td class="group">第11组</td><td>否</td></tr>
+        <tr><td class="seq">22</td><td class="name">曾连华</td><td>男</td><td class="mass">群众</td><td class="group">第12组</td><td>否</td></tr>
+        <tr><td class="seq">23</td><td class="name">曾新华</td><td>男</td><td class="mass">群众</td><td class="group">第13组</td><td>否</td></tr>
+        <tr><td class="seq">24</td><td class="name">王新生</td><td>男</td><td class="mass">群众</td><td class="group">第14组</td><td>否</td></tr>
+        <tr><td class="seq">25</td><td class="name">曾迪民</td><td>男</td><td class="mass">群众</td><td class="group">第15组</td><td>否</td></tr>
+        <tr><td class="seq">26</td><td class="name">曾文琴</td><td>男</td><td class="mass">群众</td><td class="group">第16组</td><td>否</td></tr>
+        <tr><td class="seq">27</td><td class="name">曾端喜</td><td>男</td><td class="mass">群众</td><td class="group">第17组</td><td>否</td></tr>
+        <tr><td class="seq">28</td><td class="name">曾寿华</td><td>男</td><td class="mass">群众</td><td class="group">第18组</td><td>是</td></tr>
+        <tr><td class="seq">29</td><td class="name">李春香</td><td>女</td><td class="mass">群众</td><td class="group">第19组</td><td>否</td></tr>
+        <tr><td class="seq">30</td><td class="name">赵新国</td><td>男</td><td class="party">党员</td><td class="group">第20组</td><td>否</td></tr>
+        <tr><td class="seq">31</td><td class="name">蒋玉德</td><td>男</td><td class="party">党员</td><td class="group">第21组</td><td>否</td></tr>
+        <tr><td class="seq">32</td><td class="name">申伟民</td><td>男</td><td class="party">党员</td><td class="group">第22组</td><td>否</td></tr>
+        <tr><td class="seq">33</td><td class="name">尹双文</td><td>男</td><td class="party">党员</td><td class="group">第23组</td><td>否</td></tr>
+        <tr><td class="seq">34</td><td class="name">尹友良</td><td>男</td><td class="mass">群众</td><td class="group">第24组</td><td>否</td></tr>
+        <tr><td class="seq">35</td><td class="name">周君</td><td>女</td><td class="mass">群众</td><td class="group">第25组</td><td>否</td></tr>
+        <tr><td class="seq">36</td><td class="name">赵二仪</td><td>男</td><td class="party">党员</td><td class="group">第26组</td><td>否</td></tr>
+        <tr><td class="seq">37</td><td class="name">曾安求</td><td>男</td><td class="party">党员</td><td class="group">第28组</td><td>否</td></tr>
+        <tr><td class="seq">38</td><td class="name">曾永康</td><td>男</td><td class="party">党员</td><td class="group">第28组</td><td>否</td></tr>
+        <tr><td class="seq">39</td><td class="name">赵买平</td><td>女</td><td class="party">党员</td><td class="group">第28组</td><td>否</td></tr>
+        <tr><td class="seq">40</td><td class="name">曾新华</td><td>女</td><td class="mass">群众</td><td class="group">第29组</td><td>否</td></tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <p style="text-align:center; margin:20px 0; color:var(--ink-light);">（续下表）</p>
+    
+    <div style="overflow-x:auto;">
+    <table class="representative-table">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th style="text-align:left; padding-left:12px;">姓名</th>
+          <th>性别</th>
+          <th>政治面貌</th>
+          <th>所在小组</th>
+          <th>是否连任</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="seq">41</td><td class="name">邓志珍</td><td>女</td><td class="mass">群众</td><td class="group">第29组</td><td>否</td></tr>
+        <tr><td class="seq">42</td><td class="name">彭国花</td><td>女</td><td class="mass">群众</td><td class="group">第30组</td><td>否</td></tr>
+        <tr><td class="seq">43</td><td class="name">赵小平</td><td>女</td><td class="mass">群众</td><td class="group">第30组</td><td>否</td></tr>
+        <tr><td class="seq">44</td><td class="name">曾任桥</td><td>男</td><td class="mass">群众</td><td class="group">第31组</td><td>否</td></tr>
+        <tr><td class="seq">45</td><td class="name">贺赛群</td><td>女</td><td class="mass">群众</td><td class="group">第31组</td><td>否</td></tr>
+        <tr><td class="seq" style="color:var(--gold);">注</td><td colspan="5" style="text-align:left; padding-left:12px;">共计村民代表68人（其中女性24人，党员25人）</td></tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div class="contact-info">
+      <p><strong>公示期：</strong>2026年5月30日 — 2026年6月5日（共7天）</p>
+      <p><strong>联系电话：</strong>邓斌（村支书）15173960951</p>
+      <p><strong>电子邮箱：</strong>renjiaping@village.gov.cn</p>
+      <p><strong>办公地址：</strong>仁家坪新村村委会办公楼</p>
+      <p style="margin-top:12px; font-size:0.9rem; color:var(--ink-light);">公示期间接受全村村民监督。如有异议，请于公示期内书面或电话反映。</p>
+    </div>
+    
+    <div style="margin-top:32px; padding-top:20px; border-top:1px solid rgba(0,0,0,0.08);">
+      <p style="text-align:right; color:var(--ink-light);">仁家坪新村村民委员会</p>
+      <p style="text-align:right; color:var(--ink-light); margin-top:8px;">2026年5月30日</p>
+    </div>
+
+    <a class="back-link" href="../index.html#news">← 返回公示公告</a>
+  </div>
+</div>
+
+</body>
+</html>
