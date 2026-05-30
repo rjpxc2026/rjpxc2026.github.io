@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>临时性生活困难救助工作操作规程 - 仁家坪新村</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --jade: #2D6A4F;
+    --jade-light: #40916C;
+    --jade-dark: #1B4332;
+    --cream: #FDF8F0;
+    --parchment: #F5EDE3;
+    --gold: #B8860B;
+    --ink: #1A1A1A;
+    --ink-light: #4A4A4A;
+  }
+  body {
+    font-family: 'Noto Sans SC', sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.9;
+    padding-bottom: 60px;
+  }
+  .article-header {
+    background: linear-gradient(135deg, var(--jade-dark) 0%, var(--jade) 100%);
+    color: #fff;
+    padding: 60px 20px 50px;
+    text-align: center;
+  }
+  .article-header .breadcrumb {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+  .article-header .breadcrumb a { color: #fff; text-decoration: none; }
+  .article-header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+    max-width: 800px;
+    margin: 0 auto 15px;
+    line-height: 1.4;
+  }
+  .article-meta {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    flex-wrap: wrap;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+  .article-body {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 35px;
+    margin-top: -30px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 政策来源信息 */
+  .policy-source {
+    background: linear-gradient(135deg, rgba(45,106,79,0.06), rgba(184,134,11,0.06));
+    border-radius: 10px;
+    padding: 16px 22px;
+    margin-bottom: 28px;
+    border-left: 4px solid var(--gold);
+    font-size: 0.88rem;
+    color: var(--ink-light);
+  }
+  .policy-source p { text-indent: 0; margin-bottom: 6px; }
+  .policy-source strong { color: var(--jade); }
+
+  /* 章节标题 */
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.15rem;
+    color: var(--jade-dark);
+    font-weight: 700;
+    margin: 32px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(45,106,79,0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title:first-of-type { margin-top: 12px; }
+  .section-num {
+    display: inline-flex;
+    width: 28px; height: 28px;
+    background: var(--jade);
+    color: #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  /* 正文段落 */
+  .article-body p {
+    font-size: 0.95rem;
+    color: var(--ink-light);
+    line-height: 2;
+    margin-bottom: 12px;
+    text-indent: 2em;
+  }
+  .article-body p.no-indent { text-indent: 0; }
+
+  /* 列表 */
+  .article-body ul, .article-body ol {
+    margin: 10px 0 14px 1.5em;
+    font-size: 0.93rem;
+    color: var(--ink-light);
+    line-height: 2;
+  }
+  .article-body li { margin-bottom: 5px; }
+
+  /* 嵌套列表 */
+  .sub-list {
+    list-style-type: none;
+    margin-left: 1em;
+    font-size: 0.91rem;
+  }
+  .sub-list li::before {
+    content: "• ";
+    color: var(--gold);
+    font-weight: bold;
+  }
+
+  /* 高亮框 */
+  .highlight-box {
+    background: var(--parchment);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 18px 0;
+    border-left: 3px solid var(--jade);
+  }
+  .highlight-box p { text-indent: 0; margin-bottom: 6px; font-size: 0.92rem; }
+  .highlight-box strong { color: var(--jade); }
+
+  .warning-box {
+    background: linear-gradient(135deg, rgba(184,134,11,0.08), rgba(184,134,11,0.04));
+    border-left: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0;
+  }
+  .warning-box p { text-indent: 0; margin-bottom: 6px; font-size: 0.92rem; }
+  .warning-box strong { color: var(--gold); }
+
+  /* 表格样式 */
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.92rem;
+  }
+  .info-table th {
+    background: var(--jade);
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .info-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(45,106,79,0.08);
+    color: var(--ink-light);
+  }
+  .info-table tr:hover td { background: rgba(45,106,79,0.03); }
+
+  /* 联系方式 */
+  .contact-info {
+    background: var(--parchment);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 32px;
+    border-left: 3px solid var(--jade);
+  }
+  .contact-info p { text-indent: 0; margin-bottom: 6px; }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 24px;
+    color: var(--jade);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  .back-link:hover { color: var(--gold); }
+
+  @media (max-width: 768px) {
+    .article-body { padding: 28px 20px; }
+    .article-header { padding: 40px 16px 35px; }
+    .section-title { font-size: 1.05rem; }
+    .info-table { font-size: 0.82rem; }
+    .info-table th, .info-table td { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="article-header">
+  <div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../index.html#news">规划与政策</a></div>
+  <h1>邵东县临时性生活困难救助工作操作规程</h1>
+  <div class="article-meta">
+    <span>📅 发布日期：2018-09-05</span>
+    <span>📝 信息来源：邵东县政府</span>
+    <span>🏷️ 规划与政策</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="article-body">
+
+    <div class="policy-source">
+      <p><strong>政策依据：</strong></p>
+      <p>• 《湖南省人民政府关于进一步健全完善临时救助制度的意见》（湘政发［2015］21号）</p>
+      <p>• 《邵阳市人民政府办公室关于印发&lt;临时救助暂行办法&gt;的通知》（市政办发[2015]14号）</p>
+      <p>• 《湖南省民政厅 湖南省财政厅 关于进一步加强和改进临时救助工作的实施意见》（湘民发［2018］28号）</p>
+      <p style="margin-top:8px;margin-bottom:0;">为解决城乡困难群众突发性、急迫性、临时性生活困难，进一步发挥临时救助托底线、救急难作用，特制定本操作规程。</p>
+    </div>
+
+    <!-- 一、基本原则 -->
+    <h3 class="section-title"><span class="section-num">一</span>临时生活困难救助的基本原则</h3>
+    <ol>
+      <li>坚持<strong>"救急救难"</strong>为主的原则；</li>
+      <li>坚持<strong>政府救助、社会帮扶、家庭自救相结合</strong>的原则；</li>
+      <li>坚持<strong>公开、公平、公正</strong>的原则；</li>
+      <li>坚持<strong>制度衔接、尽力而为、量力而行</strong>的原则。</li>
+    </ol>
+
+    <!-- 二、救助范围 -->
+    <h3 class="section-title"><span class="section-num">二</span>临时救助范围、类别</h3>
+    <p>根据困难情形，临时救助对象可分为<strong>急难型救助对象</strong>和<strong>支出型救助对象</strong>两类。</p>
+
+    <table class="info-table">
+      <tr>
+        <th colspan="2" style="background:var(--jade-dark)">急难型救助对象</th>
+      </tr>
+      <tr>
+        <td width="36"><strong>1</strong></td>
+        <td>因<strong>意外事件</strong>（火灾、交通事故等突发意外事件）导致基本生活暂时出现严重困难、需要立即采取措施的家庭和个人</td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td>因家庭成员<strong>突发重大疾病</strong>（包括白血病、恶性肿瘤等9种医疗救助重特大疾病）导致基本生活暂时出现严重困难的家庭和个人</td>
+      </tr>
+      <tr>
+        <td><strong>3</strong></td>
+        <td>因遭遇其他<strong>突发性特殊困难</strong>，导致基本生活暂时出现严重困难、需要立即采取救助措施的家庭和个人</td>
+      </tr>
+      <tr>
+        <th colspan="2" style="background:var(--jade-dark)">支出型救助对象</th>
+      </tr>
+      <tr>
+        <td><strong>1</strong></td>
+        <td>城乡低保对象</td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td>特困人员</td>
+      </tr>
+      <tr>
+        <td><strong>3</strong></td>
+        <td>建档立卡贫困户</td>
+      </tr>
+      <tr>
+        <td><strong>4</strong></td>
+        <td>困难残疾人</td>
+      </tr>
+      <tr>
+        <td><strong>5</strong></td>
+        <td>低保边缘群体</td>
+      </tr>
+    </table>
+
+    <!-- 三、救助标准 -->
+    <h3 class="section-title"><span class="section-num">三</span>救助标准</h3>
+
+    <div class="highlight-box">
+      <p><strong>💰 一般标准：</strong>原则上给予一次性基本生活临时救助<strong>不超过2000元</strong>，具体金额视家庭困难程度测算确定。</p>
+      <p><strong>📋 频次限制：</strong>一年内同一原因申请次数不得超过<strong>2次</strong>，金额不得超过<strong>3000元</strong>。</p>
+      <p><strong>⚠️ 特殊情况：</strong>对于遭遇重大变故（重要交通事故、突发性事件造成伤亡、罹患重大疾病等）最高临时救助仍不能缓解其困难的家庭，可通过<strong>联席会议一事一议</strong>的方式整合相关救助部门资金。</p>
+    </div>
+
+    <!-- 四、申请审核审批程序 -->
+    <h3 class="section-title"><span class="section-num">四</span>申请、审核、审批程序</h3>
+
+    <p class="no-indent" style="font-weight:600;color:var(--jade-dark);font-size:1rem;">（一）一般程序（7步）</p>
+
+    <ol>
+      <li><strong>个人申请：</strong>以户为单位，由户主向户籍所在的村（居）委会提出书面申请，并出具：①申请书；②户口簿、身份证、残疾证、低保证等身份证明材料；③危重疾病的诊断书和医药发票；④其他特殊突发事件的相关证明资料。</li>
+      <li><strong>入户调查：</strong>乡镇（街道）在受理后，要在村（居）委会协助下对申请人家庭情况、收入财产状况、遭遇困难类型与程度等进行核查，必要时可组织民主评议。</li>
+      <li><strong>家庭经济状况核对：</strong>对无法进行入户调查或调查存在疑议的申请对象，乡镇（街道）对其家庭经济状况进行核查核对。</li>
+      <li><strong>审核：</strong>乡镇（街道）根据调查核实情况提出救助审核意见，救助金额较大的需经领导集体研究后提出审核意见。</li>
+      <li><strong>审批：</strong>乡镇（街道）将审核意见报民政局审批，民政局抽查率不得低于<strong>30%</strong>。</li>
+      <li><strong>公示：</strong>审批结果在所在乡镇人民政府（街道办事处）、村（社区）进行公示，<strong>公示期不少于7日</strong>。</li>
+      <li><strong>委托审批：</strong>金额在<strong>2000元以下</strong>的，委托乡镇人民政府（街道办事处）进行审批，报民政局备案。</li>
+    </ol>
+
+    <p class="no-indent" style="font-weight:600;color:var(--jade-dark);font-size:1rem;margin-top:20px;">（二）简化程序</p>
+    <div class="warning-box">
+      <p>对于<strong>急难型临时救助</strong>，乡镇可根据救助对象的情形，<strong>简化申请家庭的经济状况核对、民主评议和公示环节</strong>，直接予以<strong>"先行救助"</strong>，以防止造成无法挽回的损失或无法改变的严重后果。待情况缓解后，再按照程序补齐相关资料、完善相关手续。</p>
+    </div>
+
+    <!-- 五、资金筹集管理 -->
+    <h3 class="section-title"><span class="section-num">五</span>临时救助资金的筹集和管理</h3>
+    <p>临时救助资金以<strong>政府投入为主，社会捐助为辅</strong>，主要通过以下渠道筹集：</p>
+    <ol>
+      <li>上级财政安排拨付专项资金</li>
+      <li>本级财政预算配套资金</li>
+      <li>从社会福利彩票所筹公益金中，每年提取<strong>10%</strong>用于临时救助</li>
+      <li>从接受的社会捐助资金中列支一部分用于临时救助</li>
+      <li>鼓励社会组织和个人通过捐赠资金和物资等形式参与临时救助</li>
+    </ol>
+
+    <div class="highlight-box">
+      <p><strong>💳 发放方式：</strong>原则上实行财政一卡通打卡发放到户，特殊情况可简化发放程序。</p>
+      <p><strong>🏦 备用金制度：</strong>由民政局统一下拨到乡镇财政所，原则上乡镇（街道）不高于<strong>2万元</strong>。</p>
+    </div>
+
+    <!-- 六、档案管理 -->
+    <h3 class="section-title"><span class="section-num">六</span>档案管理</h3>
+    <p>临时救助档案资料要实行<strong>一人一档规范化管理</strong>，包括：申请资料、身份证或户口本复印件、走访调查材料、公示材料、审核审批材料等。档案按年度装订成册。</p>
+    <p>自<strong>2019年起</strong>，全县临时救助申请将推行<strong>网上审批</strong>，逐步实现信息化管理。</p>
+
+    <!-- 七、监督检查 -->
+    <h3 class="section-title"><span class="section-num">七</span>监督检查与责任追究</h3>
+    <ul>
+      <li>县级民政部门将不定期检查，必要时委托第三方进行绩效评价</li>
+      <li>因工作重视不够、管理不力造成重大问题的，追究有关部门负责人责任</li>
+      <li>审批过程中滥用职权、玩忽职守、徇私舞弊的工作人员，追究相关责任</li>
+      <li><strong>骗取临时救助</strong>的：除追回资金外，予以行政处罚；涉嫌犯罪的，移送司法机关处理</li>
+      <li><strong>无理取闹、强行索要</strong>的：联系公安部门给予教育和处罚</li>
+    </ul>
+
+    <!-- 八、附则 -->
+    <h3 class="section-title"><span class="section-num">八</span>附则</h3>
+    <ol>
+      <li>本操作规程由<strong>社会救助管理局</strong>负责解释。</li>
+      <li>本操作规程自<strong>2018年9月15日</strong>起施行。</li>
+    </ol>
+
+    <div class="contact-info">
+      <p><strong>发布单位：</strong>邵东县民政局</p>
+      <p><strong>咨询电话：</strong>赵买平 13762861668</p>
+      <p><strong>办公地址：</strong>仁家坪新村村委会 / 流泽镇人民政府民政办</p>
+      <p style="margin-top:10px;font-size:0.88rem;color:var(--ink-light);">符合条件的村民可向村委会咨询并提出申请，我们将全程协助办理。</p>
+    </div>
+
+    <a class="back-link" href="../index.html#news">← 返回规划与政策</a>
+  </div>
+</div>
+
+</body>
+</html>
