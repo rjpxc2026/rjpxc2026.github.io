@@ -345,25 +345,42 @@
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s;
-    margin-bottom: 12px;
   }
-  .area-map-container {
+  .video-container:hover {
+    transform: scale(1.02);
+  }
+  /* 全境一览 */
+  .full-map-section {
+    padding: 40px 0 0;
+  }
+  .full-map-container {
     position: relative;
     width: 100%;
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s;
+    cursor: pointer;
   }
-  .area-map-container img {
+  .full-map-container:hover {
+    transform: scale(1.01);
+  }
+  .full-map-container img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 12px;
   }
-  .area-map-container:hover {
-    transform: scale(1.02);
-  }
-  .video-container:hover {
-    transform: scale(1.02);
+  .full-map-label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(45,106,79,0.85);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    font-weight: 500;
   }
   .video-cover,
   .video-container video {
@@ -865,6 +882,7 @@
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">村情简介</a></li>
+      <li><a href="#full-map">全境一览</a></li>
       <li><a href="#news">新闻动态</a></li>
       <li><a href="#village-history">村史渊源</a></li>
       <li><a href="#committee">村支两委</a></li>
@@ -882,6 +900,7 @@
 <!-- Floating Navigation -->
 <nav class="floating-nav" id="floatingNav">
   <a href="#about" class="floating-nav-item" data-section="about" title="村情简介">🏡</a>
+  <a href="#full-map" class="floating-nav-item" data-section="full-map" title="全境一览">🗺️</a>
   <a href="#news" class="floating-nav-item" data-section="news" title="新闻动态">📰</a>
   <a href="#village-history" class="floating-nav-item" data-section="village-history" title="村史渊源">📜</a>
   <a href="#committee" class="floating-nav-item" data-section="committee" title="村支两委">👥</a>
@@ -932,10 +951,6 @@
           </video>
           <div class="video-label">村容村貌</div>
         </div>
-        <div class="area-map-container">
-          <img src="images/village-area-map.jpg" alt="仁家坪新村区域图" />
-          <div class="video-label">区域位置</div>
-        </div>
       </div>
       <div class="about-text">
         <h3>富硒流泽 · 绝美仁家坪</h3>
@@ -974,6 +989,21 @@
           <div class="honor-badge">👴 长寿村</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- 全境一览 -->
+<section id="full-map" class="full-map-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">VILLAGE OVERVIEW</p>
+      <h2 class="section-title">仁家坪新村全境一览</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="full-map-container">
+      <img src="images/village-area-map.jpg" alt="仁家坪新村全境一览" />
+      <div class="full-map-label">全境一览</div>
     </div>
   </div>
 </section>
@@ -1361,7 +1391,7 @@ document.querySelectorAll('.feature-card, .contact-card, .notice-board, .about-g
   // Floating Navigation
   const floatingNav = document.getElementById('floatingNav');
   const floatingNavItems = document.querySelectorAll('.floating-nav-item');
-  const sections = ['about', 'news', 'village-history', 'committee', 'contact'];
+  const sections = ['about', 'full-map', 'news', 'village-history', 'committee', 'contact'];
   
   if (floatingNav) {
     // Show/hide floating nav based on scroll position
