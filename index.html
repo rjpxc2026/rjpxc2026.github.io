@@ -30,64 +30,111 @@
     line-height: 1.8;
   }
 
-  /* === NAV === */
+  /* === NAV - 参考 fhoke.com 风格 === */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 1rem 2rem;
-    background: rgba(253,248,240,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(45,106,79,0.15);
-    transition: all 0.4s;
+    padding: 1.25rem 3rem;
+    background: rgba(253, 248, 240, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(45, 106, 79, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  nav.scrolled { background: rgba(253,248,240,0.98); box-shadow: 0 2px 24px rgba(27,67,50,0.08); }
+  nav.scrolled { 
+    background: rgba(253, 248, 240, 0.98);
+    box-shadow: 0 1px 20px rgba(27, 67, 50, 0.06);
+    padding: 0.875rem 3rem;
+  }
   .nav-inner {
-    max-width: 1200px; margin: 0 auto;
-    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1400px; 
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
   }
   .nav-brand {
     font-family: 'Noto Serif SC', serif;
-    font-size: 1.5rem; font-weight: 700;
+    font-size: 1.65rem; 
+    font-weight: 700;
     color: var(--jade-dark);
-    display: flex; align-items: center; gap: 0.5rem;
+    display: flex; 
+    align-items: center; 
+    gap: 0.75rem;
+    text-decoration: none;
+    letter-spacing: -0.02em;
   }
-  .nav-brand img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-brand:hover { color: var(--jade); }
+  .nav-brand img { 
+    width: 38px; 
+    height: 38px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 2px solid rgba(45, 106, 79, 0.15);
+    transition: border-color 0.3s;
+  }
+  .nav-brand:hover img { border-color: var(--jade); }
+  .nav-links { 
+    display: flex; 
+    gap: 2.5rem; 
+    list-style: none; 
+    align-items: center;
+  }
   .nav-links a {
-    text-decoration: none; color: var(--ink-light);
-    font-size: 0.9rem; font-weight: 500;
-    position: relative; padding: 0.25rem 0;
+    text-decoration: none; 
+    color: var(--ink-light);
+    font-size: 0.925rem; 
+    font-weight: 400;
+    position: relative; 
+    padding: 0.5rem 0;
     transition: color 0.3s;
+    letter-spacing: 0.02em;
   }
   .nav-links a::after {
-    content: ''; position: absolute; bottom: -2px; left: 0;
-    width: 0; height: 2px; background: var(--jade);
-    transition: width 0.3s;
+    content: ''; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 0; 
+    height: 1.5px; 
+    background: var(--jade);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .nav-links a:hover { color: var(--jade); }
+  .nav-links a:hover { color: var(--jade-dark); }
   .nav-links a:hover::after { width: 100%; }
+  .nav-links a.active { color: var(--jade-dark); font-weight: 500; }
+  .nav-links a.active::after { width: 100%; }
   
-  /* 汉堡菜单按钮 */
+  /* 汉堡菜单按钮 - 更现代的设计 */
   .nav-hamburger {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 8px;
     z-index: 1001;
+    -webkit-tap-highlight-color: transparent;
   }
   .nav-hamburger span {
     display: block;
-    width: 24px;
+    width: 26px;
     height: 2px;
     background: var(--ink);
     border-radius: 2px;
-    transition: all 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
   }
-  .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-  .nav-hamburger.active span:nth-child(2) { opacity: 0; }
-  .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+  .nav-hamburger.active span:nth-child(1) { 
+    transform: translateY(8px) rotate(45deg); 
+  }
+  .nav-hamburger.active span:nth-child(2) { 
+    opacity: 0; 
+    transform: scaleX(0);
+  }
+  .nav-hamburger.active span:nth-child(3) { 
+    transform: translateY(-8px) rotate(-45deg); 
+  }
   
   /* 回到顶部按钮 */
   .back-to-top {
@@ -114,60 +161,43 @@
   .back-to-top.visible { opacity: 1; visibility: visible; }
   .back-to-top:hover { background: var(--jade-light); transform: translateY(-3px); }
   
-  /* 右侧浮动导航键 */
-  .floating-nav {
-    position: fixed;
-    right: 8px;
-    left: auto;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 998;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s;
-    background: transparent;
-    pointer-events: auto;
-  }
-  .floating-nav.visible { opacity: 1; visibility: visible; }
-  .floating-nav-item {
-    width: 28px;
-    height: 28px;
-    background: transparent;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 0.85rem;
-    transition: all 0.25s;
-    text-decoration: none;
-    color: var(--jade);
-    filter: drop-shadow(0 1px 2px rgba(27,67,50,0.3));
-  }
-  .floating-nav-item:hover { 
-    color: var(--jade-dark); 
-    transform: scale(1.15); 
-  }
-  .floating-nav-item.active { 
-    color: var(--jade-dark);
-    background: rgba(45,106,79,0.12);
-  }
+
   
+  /* === 移动端导航 === */
   @media (max-width: 768px) {
-    .floating-nav { 
-      right: 4px; 
-      left: auto;
-      gap: 1px;
+    nav { padding: 1rem 1.5rem; }
+    nav.scrolled { padding: 0.75rem 1.5rem; }
+    .nav-brand { font-size: 1.35rem; gap: 0.5rem; }
+    .nav-brand img { width: 32px; height: 32px; }
+    .nav-hamburger { display: flex; }
+    .nav-links { 
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(253, 248, 240, 0.99);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 999;
     }
-    .floating-nav-item { 
-      width: 22px; 
-      height: 22px; 
-      font-size: 0.7rem; 
+    .nav-links.active { 
+      opacity: 1; 
+      visibility: visible; 
     }
+    .nav-links a { 
+      font-size: 1.5rem; 
+      font-weight: 500;
+      padding: 0.75rem 0;
+    }
+    .nav-links a::after { height: 2px; }
   }
 
   /* === HERO === */
@@ -897,15 +927,7 @@
 </nav>
 
 
-<!-- Floating Navigation -->
-<nav class="floating-nav" id="floatingNav">
-  <a href="#about" class="floating-nav-item" data-section="about" title="村情简介">🏡</a>
-  <a href="#full-map" class="floating-nav-item" data-section="full-map" title="全境一览">🗺️</a>
-  <a href="#news" class="floating-nav-item" data-section="news" title="新闻动态">📰</a>
-  <a href="#village-history" class="floating-nav-item" data-section="village-history" title="村史渊源">📜</a>
-  <a href="#committee" class="floating-nav-item" data-section="committee" title="村支两委">👥</a>
-  <a href="#contact" class="floating-nav-item" data-section="contact" title="联系我们">📞</a>
-</nav>
+
 
 <!-- Hero -->
 <section class="hero">
@@ -1389,53 +1411,31 @@ document.querySelectorAll('.feature-card, .contact-card, .notice-board, .about-g
   
   
   // Floating Navigation
-  const floatingNav = document.getElementById('floatingNav');
-  const floatingNavItems = document.querySelectorAll('.floating-nav-item');
+  // 高亮当前板块（用于顶部导航）
+  const navLinks = document.querySelectorAll('.nav-links a');
   const sections = ['about', 'full-map', 'news', 'village-history', 'committee', 'contact'];
   
-  if (floatingNav) {
-    // Show/hide floating nav based on scroll position
-    window.addEventListener('scroll', () => {
-      // Show after hero section (300px)
-      if (window.scrollY > 300) {
-        floatingNav.classList.add('visible');
-      } else {
-        floatingNav.classList.remove('visible');
+  window.addEventListener('scroll', () => {
+    // 滚动后高亮当前板块
+    let currentSection = '';
+    sections.forEach(id => {
+      const section = document.getElementById(id);
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom > 150) {
+          currentSection = id;
+        }
       }
-      
-      // Highlight active section
-      let currentSection = '';
-      sections.forEach(id => {
-        const section = document.getElementById(id);
-        if (section) {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom > 150) {
-            currentSection = id;
-          }
-        }
-      });
-      
-      floatingNavItems.forEach(item => {
-        if (item.dataset.section === currentSection) {
-          item.classList.add('active');
-        } else {
-          item.classList.remove('active');
-        }
-      });
     });
     
-    // Smooth scroll on click
-    floatingNavItems.forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = item.dataset.section;
-        const target = document.getElementById(targetId);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === `#${currentSection}`) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
     });
-  }
+  });
 
 
   </script>
